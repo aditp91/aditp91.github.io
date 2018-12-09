@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>DataStory - Info Viz 554</title>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/blog-post.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #000d42d7;">
+      <div class="container">
+        <a class="navbar-brand" href="./index.html">Data Story Project</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Analysis</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./insights.html">Insights</a>
+			</li>
+			<li class="nav-item active">
+			  <a class="nav-link" href="./approach.html">Approach
+				<span class="sr-only">(current)</span>
+				</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+      <div class="row">
+        <!-- Post Content Column -->
+        <div class="col-lg-8">
+          <!-- Title -->
+          <h1 class="mt-4">Approach</h1>
+
+          <hr>
+
+          <!-- Description -->
+		  <p>Experiences and obstacles faced throughout the project</p>
+
+          <hr>
+
+          <!-- Section -->
+          <div class="card my-4">
+            <h5 class="card-header">Behind the Scenes</h5>
+            <div class="card-body">
+				<!-- Post Content -->
+				<p class="lead">The Approach</p>
+				<hr>
+				<p>For this topic, there were resources on Google Cloud Platform that could be imported into a very useful tool to query the data based on the metrics which are needed.</p>
+				<p>Through Google BigQuery, I was able to extract the information through the use of SQL queries utilizing the specific tables that contained the relational aspects of the attributes I needed. I exported this data as CSV files.</p>
+				<div>
+					<p><b>-- Google's BigQuery UI (Beta) --</b></p>
+					<img class="img-fluid rounded" src="./screenshot_big_query.png" alt="">
+				</div>
+				<br>
+				<p>Next, I imported the extracted CSV files containing the StackOverflow results into Plotly Chart Studio, for which I was able to build plots, graphs, and charts to visualize the data in a meaningful way.</p>
+				<div>
+					<p><b>-- Plotly Chart Studio --</b></p>
+					<img class="img-fluid rounded" src="./screenshot_plotly.png" alt="">
+				</div>
+				<br>
+
+				<!-- Post Content -->
+				<p class="lead">Experience</p>
+				<hr>
+
+				<p>
+					Most of the time spent on this analysis project was the transformation phase. After identifying and extracting the data sets I needed, building the queries to manipulate them was the most tedious and the difficult part of this.
+				</p>
+
+				<p>
+					There were a couple of datasets on Stackoverflow information that I surely wish to further explore and draw more analysis on. It’s very useful to know the directions in which certain trends are going in hopes of deriving more data-related insights.
+				</p>
+
+				<p>
+					Using Plotly's Chart Studio reminded me of the experience I had with Tableau. The widget generation, the transformations, theming, and shortcuts are very similar to that of Tableau's features.
+				</p>
+				<br>
+
+				<!-- Post Content -->
+				<p class="lead">Obstacles</p>
+				<hr>
+
+				<p>
+					I could not find certain data that I had other questions for such as the url references on posts and “marked” answers.
+				</p>
+
+				<p>
+					It must be taken into account of deleted posts which actually should be included in this case because we are interested in certain metrics. A post is likely to be deleted if it’s a bad question, thus not getting a higher number of answers, score, and favorites.
+				</p>
+
+				<p>
+					With more time, I would have answered other questions such as - “What time of the day are users people typically posting and answering questions?” or even more specifically, “Which metrics determine a higher and a more diverse badge count for users who answer many questions?”
+				</p>
+
+			</div>
+		  </div>
+
+		  <!-- Section -->
+          <div class="card my-4">
+            <h5 class="card-header">Presentation</h5>
+            <div class="card-body">
+				<!-- Post Content -->
+				<p class="lead">Learn more on the DataStory</p>
+				<hr>
+				<div>
+					<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSNU3foMcxHQWfSy5Kh4B1gnQdACo6cTcHtPUassAOLe-402jCMctesn9Bzv0aqcsQ_xXExC4Wgfueh/embed?start=false&loop=true&delayms=3000" frameborder="0" width="680" height="424" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+				</div>
+			</div>
+		  </div>
+
+          <!-- Single Comment -->
+          <!-- <div class="media mb-4">
+            <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+            <div class="media-body">
+              <h5 class="mt-0">Commenter Name</h5>
+              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+            </div>
+          </div> -->
+
+        </div>
+
+        <!-- Sidebar Widgets Column -->
+        <div class="col-md-4">
+          <!-- Summary -->
+          <div class="card my-4">
+            <h5 class="card-header">Summary</h5>
+            <div class="card-body">
+              This page reflects the approach that I took to create the datastory and the experiences and obstacles that I faced while utilizing the various tools that I needed.
+            </div>
+		  </div>
+
+		  <!-- Categories Widget -->
+          <div class="card my-4">
+				<h5 class="card-header">Useful Links</h5>
+				<div class="card-body">
+				  <div class="row">
+					<div class="col-lg-6">
+					  <ul class="list-unstyled mb-0">
+						<li>
+						  <a href="https://console.cloud.google.com/marketplace/details/stack-exchange/stack-overflow?q=stack&id=46a148ff-896d-444c-b08d-360169911f59&project=nomadic-vine-134917&folder&organizationId">Google BigQuery</a>
+						</li>
+						<li>
+						  <a href="https://plot.ly/">Plotly</a>
+						</li>
+						<li>
+						  <a href="https://www.w3schools.com/sql/default.asp">SQL on W3Schools</a>
+						</li>
+					  </ul>
+					</div>
+				  </div>
+				</div>
+			  </div>
+        </div>
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Data Story Project - Adithya Pothuri - 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>
