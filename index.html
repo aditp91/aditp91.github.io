@@ -1,222 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <title>IBM Moving Avg</title>
 
-    <title>DataStory - Info Viz 554</title>
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom styles for this template -->
-    <link href="css/blog-post.css" rel="stylesheet">
-  </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css"/>
 
-  <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #000d42d7;">
-      <div class="container">
-        <a class="navbar-brand" href="./index.html">Data Story Project</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="./index.html">Analysis
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./insights.html">Insights</a>
-			</li>
-			<li class="nav-item">
-              <a class="nav-link" href="./approach.html">Approach</a>
-            </li>
-          </ul>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ramda/0.25.0/ramda.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+</head>
+<body>
+    <div id="modal" class="modal is-active">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <p class="box title">- LOADING -</p>
         </div>
-      </div>
-    </nav>
-
-    <!-- Page Content -->
-    <div class="container">
-      <div class="row">
-        <!-- Post Content Column -->
-        <div class="col-lg-8">
-          <!-- Title -->
-          <h1 class="mt-4">Data Story Analysis</h1>
-          <!-- Author -->
-          <p class="lead">
-            by
-            <a href="#">Adithya Pothuri</a>
-          </p>
-
-          <hr>
-
-          <!-- Description -->
-		  <p>Analysis on the <a href="https://console.cloud.google.com/marketplace/details/stack-exchange/stack-overflow?q=stack&id=46a148ff-896d-444c-b08d-360169911f59&project=nomadic-vine-134917&folder&organizationId">
-			Stackoverflow Dataset</a>
-			</p>
-
-          <hr>
-
-          <!-- Section -->
-          <div class="card my-4">
-            <h5 class="card-header">Q1:</h5>
-            <div class="card-body">
-				<!-- Post Content -->
-				<p class="lead">Are more posts/questions getting answered over the years?</p>
-				<hr>
-
-				<div>
-					<p><b>-- Query --</b></p>
-					<img class="img-fluid rounded" src="./q1_query.jpeg" alt="">
-				</div>
-				<blockquote class="blockquote">
-				  <footer class="blockquote-footer">This is the SQL query from the Google BigQuery dataset</footer>
-				</blockquote>
-
-				<div>
-					<p><b>-- Result --</b></p>
-					<img class="img-fluid rounded" src="./q1_result.jpeg" alt="">
-				</div>
-				<blockquote class="blockquote">
-				  <footer class="blockquote-footer">This is the resulting data from the query</footer>
-				</blockquote>
-
-				<div>
-					<p><b>-- Plot --</b></p>
-					<img class="img-fluid rounded" src="./q1_plot.jpeg" alt="">
-				</div>
-				<blockquote class="blockquote">
-				  <footer class="blockquote-footer">This is the plot generated using Plotly Chart Studio</footer>
-				</blockquote>
-			</div>
-		  </div>
-
-		  <!-- Section -->
-		  <div class="card my-4">
-				<h5 class="card-header">Q2:</h5>
-				<div class="card-body">
-					<!-- Post Content -->
-					<p class="lead">Do posts with a higher score typically get more views?</p>
-					<hr>
-
-					<div>
-						<p><b>-- Query --</b></p>
-						<img class="img-fluid rounded" src="./q2_query.jpeg" alt="">
-					</div>
-					<blockquote class="blockquote">
-						<footer class="blockquote-footer">This is the SQL query from the Google BigQuery dataset</footer>
-					</blockquote>
-
-					<div>
-						<p><b>-- Result --</b></p>
-						<img class="img-fluid rounded" src="./q2_result.jpeg" alt="">
-					</div>
-					<blockquote class="blockquote">
-						<footer class="blockquote-footer">This is the resulting data from the query</footer>
-					</blockquote>
-
-					<div>
-						<p><b>-- Plot --</b></p>
-						<img class="img-fluid rounded" src="./q2_plot.jpeg" alt="">
-					</div>
-					<blockquote class="blockquote">
-						<footer class="blockquote-footer">This is the plot generated using Plotly Chart Studio</footer>
-					</blockquote>
-				</div>
-			</div>
-
-		  <!-- Section -->
-          <div class="card my-4">
-            <h5 class="card-header">Q3:</h5>
-            <div class="card-body">
-				<!-- Post Content -->
-				<p class="lead">Do the number of answers for post influence the number of favorites?</p>
-				<hr>
-
-				<div>
-					<p><b>-- Query --</b></p>
-					<img class="img-fluid rounded" src="./q3_query.jpeg" alt="">
-				</div>
-				<blockquote class="blockquote">
-				  <footer class="blockquote-footer">This is the SQL query from the Google BigQuery dataset</footer>
-				</blockquote>
-
-				<div>
-					<p><b>-- Result --</b></p>
-					<img class="img-fluid rounded" src="./q3_result.jpeg" alt="">
-				</div>
-				<blockquote class="blockquote">
-				  <footer class="blockquote-footer">This is the resulting data from the query</footer>
-				</blockquote>
-
-				<div>
-					<p><b>-- Plot --</b></p>
-					<img class="img-fluid rounded" src="./q3_plot.jpeg" alt="">
-				</div>
-				<blockquote class="blockquote">
-				  <footer class="blockquote-footer">This is the plot generated using Plotly Chart Studio</footer>
-				</blockquote>
-			</div>
-		  </div>
-
-        </div>
-
-        <!-- Sidebar Widgets Column -->
-        <div class="col-md-4">
-          <!-- Summary -->
-          <div class="card my-4">
-            <h5 class="card-header">Summary</h5>
-            <div class="card-body">
-              The purpose of this study was to measure and analyze collaboration efforts and the quality of Stackoverflow posts over the years.
-            </div>
-		  </div>
-
-		  <!-- Categories Widget -->
-          <div class="card my-4">
-				<h5 class="card-header">Useful Links</h5>
-				<div class="card-body">
-				  <div class="row">
-					<div class="col-lg-6">
-					  <ul class="list-unstyled mb-0">
-						<li>
-						  <a href="https://console.cloud.google.com/marketplace/details/stack-exchange/stack-overflow?q=stack&id=46a148ff-896d-444c-b08d-360169911f59&project=nomadic-vine-134917&folder&organizationId">Google BigQuery</a>
-						</li>
-						<li>
-						  <a href="https://plot.ly/">Plotly</a>
-						</li>
-						<li>
-						  <a href="https://www.w3schools.com/sql/default.asp">SQL on W3Schools</a>
-						</li>
-					  </ul>
-					</div>
-				  </div>
-				</div>
-			  </div>
-        </div>
-
-      </div>
-      <!-- /.row -->
-
     </div>
-    <!-- /.container -->
-
-    <!-- Footer -->
-    <footer class="py-5 bg-dark">
-      <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Data Story Project - Adithya Pothuri - 2018</p>
-      </div>
-      <!-- /.container -->
-    </footer>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  </body>
-
+    <canvas id="my-chart" width="700" height="700"></canvas>
+    <script src="chart.js"></script>
+</body>
 </html>
